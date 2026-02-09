@@ -25,11 +25,11 @@
 #import "@preview/fontawesome:0.5.0": fa-icon, fa-stack
 #import "@preview/nth:1.0.1": nth
 
-#let name = "Dirk Gently"
+#let name = "Johannes Weinbrecht"
 #let pronouns = "he/him"
-#let profile-image = image("assets/profile.png")
+#let profile-image = image("assets/profile.jpg")
 #let short-description = [
-  Holistic Detective & Interconnectedness Specialist
+  Dualer Student Informatik und Stipendiat der Studienstiftung des Deutschen Volkes
 ]
 
 #let th = theme-helper(theme)
@@ -148,7 +148,7 @@
 #let aside-content-1 = [
   #make-aside-persona(
     name,
-    pronouns: pronouns,
+    //pronouns: pronouns,
     short-description: short-description,
     image: profile-image,
     theme: theme,
@@ -157,11 +157,11 @@
   #make-aside-grid(
     theme: theme,
     iconer-stack("calendar"),
-    [March #nth(17, sup: true), 1958],
+    [28. April 2006],
     iconer-stack("map-marker-alt"),
-    [Cambridge, UK],
-    iconer-stack("globe"),
-    [#link("https://holisticdetective.co.uk", "holisticdetective.co.uk")],
+    [Karlsruhe, Deutschland],
+    //iconer-stack("globe"),
+    //[#link("https://holisticdetective.co.uk", "holisticdetective.co.uk")],
     iconer-stack("phone"),
     [#link("tel:+44 800 PARADOX", [+44 800 PARADOX])],
     iconer-stack("at"),
