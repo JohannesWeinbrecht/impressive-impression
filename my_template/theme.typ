@@ -86,6 +86,7 @@
   aside-heading-line-opposite-gap: 10pt,
   aside-heading-line-thickness: 1pt,
   aside-heading-line-cap: "round",
+  aside-heading-line-opposite-cap: "butt",
 
   aside-pill-box-inner: (
     fill: _aside-background-color.lighten(75%),
