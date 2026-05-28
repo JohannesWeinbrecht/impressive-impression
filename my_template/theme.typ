@@ -1,5 +1,21 @@
-#let _primary-accent-color = rgb("#266590")
-#let _secondary-accent-color = rgb("#115484")
+// Standard Blue
+//#let _primary-accent-color = rgb("#266590")
+//#let _secondary-accent-color = rgb("#115484")
+
+// Nice Purple
+// #let _primary-accent-color = rgb("#3A015C")
+// #let _secondary-accent-color = rgb("#3a015c")
+// Some purples: 3a015c, 3a015c, 3a015c, 3a015c
+
+// Dark red
+//#let _primary-accent-color = rgb("#851D11")
+//#let _secondary-accent-color = rgb("#8F2E25")
+
+
+// Profile Pic theme
+#let _primary-accent-color = rgb("#5B2131")
+#let _secondary-accent-color = rgb("#3D262C")
+
 #let _primary-text-color = rgb("#000000")
 #let _secondary-text-color = rgb("#333333")
 #let _faint-text-color = rgb("#666666")
