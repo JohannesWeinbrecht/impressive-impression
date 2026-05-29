@@ -1,6 +1,34 @@
 #import "utils.typ": crop-image
 #import "theme.typ": theme-helper
 
+#let skill-bar(
+  percentage,
+  height: 10pt,
+  radius: 5pt,
+  color-active: color.blue,
+  color-inactive: color.gray
+) = {
+    rect(
+      width: 100%,
+      height: height,
+      fill: color-inactive,
+      radius: radius,
+      stroke: none,
+      inset: 0pt,
+      [
+        #place(left + top)[
+          #rect(
+            width: percentage,
+            height: height,
+            fill: color-active,
+            radius: 5pt,
+            stroke: none
+          )
+        ]
+      ]
+    )
+}
+
 /// Create a dot rating component.
 /// -> content
 #let dot-ratings(
