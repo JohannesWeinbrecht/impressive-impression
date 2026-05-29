@@ -10,6 +10,7 @@
   colorize-svg-string,
   // Elements
   dot-ratings,
+  skill-bar,
   make-pill,
   make-aside-persona,
   make-aside-grid,
@@ -29,7 +30,7 @@
 #let pronouns = "he/him"
 #let profile-image = image("assets/profile.jpg")
 #let short-description = [
-  Dualer Student Informatik und Stipendiat der Studienstiftung des Deutschen Volkes
+  Dualer Student Informatik
 ]
 
 #let th = theme-helper(theme)
@@ -39,6 +40,12 @@
 #let dot-ratings = dot-ratings.with(
   size: 6.5pt,
   spacing: 3.5pt,
+  color-active: th("primary-accent-color"),
+  color-inactive: th("faint-text-color").transparentize(65%),
+)
+#let skill-bar = skill-bar.with(
+  height: 8pt,
+  radius: 4pt,
   color-active: th("primary-accent-color"),
   color-inactive: th("faint-text-color").transparentize(65%),
 )
@@ -64,87 +71,82 @@
 
 // Page 1
 #let main-content-1 = [
-  == Introduction
-  #block([
-    #set par(justify: true)
-    Holistic detective with an unwavering commitment to exploring the fundamental interconnectedness of all things. I combine an unconventional investigative approach with a keen intuition for improbable solutions, engaging confidently with the realms of the paranormal, temporal anomalies, and missing cats.
+  == Bildungsweg
 
-    My experience spans peculiar cases involving time travel, quantum uncertainty, and reluctant clients. I thrive in unpredictable environments, leveraging resilience and a penchant for eccentric problem-solving to uncover answers that others overlook.
-  ])
+  === Studium
 
-  == Work Experience
   #make-main-content-block-with-timeline(
-    ([Present], [2018]),
-    "Founder & Chief Detective",
-    supplement: [#link("https://holisticdetective.com", "Holistic Detective Agency")],
+    ([Present], [2024]),
+    "Duales Studium Informatik",
+    supplement: [#link("www.karlsruhe.dhbw.de", "DHBW Karlsruhe") & #link("www.kit.edu", "KIT")],
     [
-      Established and operated a one-of-a-kind agency dedicated to solving mysteries via the interconnectedness of all things.
-      - Successfully resolved cases involving missing cats, haunted computers, and spontaneously appearing sofas.
-      - Developed proprietary “luck-based” investigative techniques and pioneered random taxi route methodologies.
-    ]
-  )
-  #make-main-content-block-with-timeline(
-    ([2018], [2017]),
-    "Quantum Cat Retrieval Specialist – Freelance",
-    supplement: [#link("https://en.wikipedia.org/wiki/Cambridge", "Various Clients")],
-    [
-      - Assisted clients in locating pets lost to quantum uncertainty and other improbable circumstances.
-      - Collaborated with physicists and veterinarians to develop the Schrödinger Protocol for ambiguous animal recovery.
-    ]
-  )
-  #make-main-content-block-with-timeline(
-    ([2017], [2015]),
-    "Temporal Anomaly Investigator – Contractor",
-    supplement: [#link("https://www.cam.ac.uk/", "St. Cedd’s College")],
-    [
-      - Investigated and contained time loops, paradoxes, and chronologically misplaced furniture within the college precincts.
-      - Published "_A Holistic Guide to Sofa Extraction from Impossible Spaces_" (unofficial circulation).
-    ]
-  )
-  #make-main-content-block-with-timeline(
-    ([2016], [2014]),
-    "Unconventional Technology Consultant – Part-Time",
-    supplement: [#link("https://en.wikipedia.org/wiki/London", "London")],
-    [
-      - Provided troubleshooting for haunted answering machines, sentient software, and vintage electronics.
-      - Implemented holistic diagnostics, improving technology-cohabitation harmony by 47%.
+      Duales Studium Informatik an der dualen Hochschule Baden-Württemberg Karlsruhe in Kooperation mit dem Karlsruher Institut für Technologie.
+      Am KIT bin ich am Institut für Automation und Angewandte Informatik in der Forschungsgruppe Energiesystemanalyse tätig.
     ]
   )
 
-  == Education
+  === Schulische Laufbahn
+
   #make-main-content-block-with-timeline(
-    ([2014], [2015]),
-    "MSc in Applied Holistic Sciences",
-    supplement: [#link("https://www.cam.ac.uk/", "University of Cambridge")],
+    ([2022], [2024]),
+    "Abitur",
+    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
     [
-      Specialised in advanced interconnectedness analytics, time anomaly mitigation, and cross-dimensional case studies.
-      - Research thesis: "_The Practical Applications of Quantum Uncertainty in Everyday Detection._"
-      - Elected chair of the Society for Random Investigations and Improvised Solutions.
+      Abiturnote #sym.nothing 1.0 (870/900 Punkten)\
+      Leistungskurse: Mathe, Physik, Chemie\
+      Zusätzliche Kurse: Informatik & Vertiefungskurs Mathematik
     ]
   )
   #make-main-content-block-with-timeline(
-    ([2011], [2014]),
-    "BA (Hons) in Holistic Detection",
-    supplement: [#link("https://www.cam.ac.uk/", "University of Cambridge")],
+    ([2016], [2022]),
+    "Allgemeinbildendes Gymnasium",
+    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
     [
-      Developed a rigorous understanding of the fundamental interconnectedness of all things.\
-      - Focus on quantum paradoxes, time travel theory, and sofa geometry.\
-      - President of the Pizza Appreciation Society, founding member of the Parapsychology Club.
+      Schwerpunktfach: IMP (Informatik, Mathematik, Physik)
     ]
   )
   #make-main-content-block-with-timeline(
-    ([2008], [2011]),
-    "A-Levels",
-    supplement: [#link("https://www.longroad.ac.uk/", "Long Road College")],
+    ([2012], [2016]),
+    "Allgemeinbildendes Gymnasium",
+    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
     [
-      Philosophy, Physics, and Strange Occurrences
-      - Achieved top marks in unorthodox reasoning and creative logic.
-      - Winner of the “Most Unlikely Solution” award (two consecutive years).
-      - Organised the annual Quantum Cat Hide-and-Seek competition.
+      Schwerpunktfach: IMP (Informatik, Mathematik, Physik)
     ]
   )
+
+// Professional Background
+  == Beruflicher Werdegang
+
+// Work Experience
+  === Duales Studium
+  #make-main-content-block-with-timeline(
+    ([2024-12], [2024-10]),
+    "Dritte Praxisphase",
+    supplement: [#link("www.kit.edu", "KIT")],
+    [
+    ]
+  )
+
+  #make-main-content-block-with-timeline(
+    ([2024-12], [2024-10]),
+    "Zweite Praxisphase",
+    supplement: [#link("www.kit.edu", "KIT")],
+    [
+    ]
+  )
+
+  #make-main-content-block-with-timeline(
+    ([2024-12], [2024-10]),
+    "Erste Praxisphase",
+    supplement: [#link("www.kit.edu", "KIT")],
+    [
+      Einarbeitung in die betrieblichen Abläufe. Erweiterung des Open-Source Projekts ePowCoRe.
+    ]
+  )
+
+// Internships
+  === Praktika
 ]
-
 #let aside-content-1 = [
   #make-aside-persona(
     name,
@@ -183,18 +185,28 @@
     rows: 12pt,
     align: (horizon + center, horizon + left, horizon + right),
     theme: theme,
+    flag("GER"),
+    [German],
+    [C2],
+    dot-ratings(6, 6),
     flag("GB"),
     [English],
-    [C2],
-    dot-ratings(5, 5),
+    [C1],
+    dot-ratings(5, 6),
     flag("FR"),
-    [French-ish],
-    [C2],
-    dot-ratings(4, 5),
-    flag("GR"),
-    [Ancient Greek],
-    [C2],
-    dot-ratings(3, 5),
+    [French],
+    [B1],
+    dot-ratings(3, 6),
+  )
+
+  == Test
+
+  #make-aside-grid(
+    theme: theme,
+    align: (horizon + left),
+    columns: 1,
+    [Python],
+    skill-bar(50%),
   )
 
   == Hard Skills
