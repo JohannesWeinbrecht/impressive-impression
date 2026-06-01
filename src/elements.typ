@@ -1,6 +1,25 @@
 #import "utils.typ": crop-image
 #import "theme.typ": theme-helper
 
+#let bento(txt, icon, bg, txt-col, col-span: 1) = grid.cell(colspan: col-span)[
+  #box(
+    width: 100%,
+    inset: 8pt,
+    radius: 6pt,
+    fill: bg,
+    align(center + horizon)[
+      #set text(fill: txt-col, size: 8.5pt, weight: "medium")
+      #grid(
+        columns: (auto, auto),
+        column-gutter: 5pt,
+        align: horizon,
+        text(size: 11pt, icon), // Verarbeitet das Icon jetzt sauber als Text-String
+        txt
+      )
+    ]
+  )
+]
+
 #let skill-bar(
   percentage,
   height: 10pt,
