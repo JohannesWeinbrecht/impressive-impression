@@ -1,44 +1,49 @@
 #import "utils.typ": crop-image
 #import "theme.typ": theme-helper
 
-// Basis-Farbe deines Templates greifen
-#let base-color = th("secondary-text-color") 
 
-// 5 edle Farbnuancen (von dunkel nach hell)
-#let colors = (
-  base-color.lighten(15%), // 0: Am dunkelsten
-  base-color.lighten(30%), // 1
-  base-color.lighten(45%), // 2
-  base-color.lighten(60%), // 3
-  base-color.lighten(72%)  // 4: Am hellsten
-)
+#let bubble-diagram(
 
-// Funktion für die Kreise mit flexibler Größe (size)
-#let c-shape(bg, size) = box(width: size, height: size, radius: 100%, fill: bg, stroke: 2pt + white)
-
-// Funktion für den Text mit exakt übereinstimmender Größe
-#let c-text(txt, size) = box(width: size, height: size, align(center + horizon, text(size: 8.5pt, fill: white, weight: "bold", txt)))
-
-// Das absolut organische Layout – JEDER Kreis hat eine eigene Größe!
-#align(center)[
-  #block(width: 4.4cm, height: 4.5cm, [
-    
-    // LAYER 1: KREISE (Hierarchisch gestapelt, Pilates liegt ganz oben!)
-    #place(top + left, dx: 2.10cm, dy: 0.15cm, c-shape(colors.at(3), 1.9cm)) // Singen (Medium-Small)
-    #place(top + left, dx: 2.40cm, dy: 1.65cm, c-shape(colors.at(1), 1.7cm)) // Lesen (Small)
-    #place(top + left, dx: 0.85cm, dy: 2.15cm, c-shape(colors.at(2), 2.3cm)) // Gedichte schreiben (Am größten)
-    #place(top + left, dx: 0.25cm, dy: 0.05cm, c-shape(colors.at(0), 2.1cm)) // Kochen & Backen (Medium-Large)
-    #place(top + left, dx: 0.15cm, dy: 1.60cm, c-shape(colors.at(4), 1.5cm)) // Pilates (Am kleinsten & im VORDERGRUND)
-    
-    // LAYER 2: TEXTE (Exakt deckungsgleich drübergelegt)
-    #place(top + left, dx: 2.10cm, dy: 0.15cm, c-text("Singen", 1.9cm))
-    #place(top + left, dx: 2.40cm, dy: 1.65cm, c-text("Lesen", 1.7cm))
-    #place(top + left, dx: 0.85cm, dy: 2.15cm, c-text("Gedichte \n schreiben", 2.3cm))
-    #place(top + left, dx: 0.25cm, dy: 0.05cm, c-text("Kochen & \n Backen", 2.1cm))
-    #place(top + left, dx: 0.15cm, dy: 1.60cm, c-text("Pilates", 1.5cm))
-    
-  ])
-]
+) = {
+  // Basis-Farbe deines Templates greifen
+  let base-color = th("secondary-text-color") 
+  
+  // 5 edle Farbnuancen (von dunkel nach hell)
+  let colors = (
+    base-color.lighten(15%), // 0: Am dunkelsten
+    base-color.lighten(30%), // 1
+    base-color.lighten(45%), // 2
+    base-color.lighten(60%), // 3
+    base-color.lighten(72%)  // 4: Am hellsten
+  )
+  
+  // Funktion für die Kreise mit flexibler Größe (size)
+  let c-shape(bg, size) = box(width: size, height: size, radius: 100%, fill: bg, stroke: 2pt + white)
+  
+  // Funktion für den Text mit exakt übereinstimmender Größe
+  let c-text(txt, size) = box(width: size, height: size, align(center + horizon, text(size: 8.5pt, fill: white, weight: "bold", txt)))
+  
+  // Das absolut organische Layout – JEDER Kreis hat eine eigene Größe!
+  align(center)[
+    #block(width: 4.4cm, height: 4.5cm, [
+      
+      // LAYER 1: KREISE (Hierarchisch gestapelt, Pilates liegt ganz oben!)
+      #place(top + left, dx: 2.10cm, dy: 0.15cm, c-shape(colors.at(3), 1.9cm)) // Singen (Medium-Small)
+      #place(top + left, dx: 2.40cm, dy: 1.65cm, c-shape(colors.at(1), 1.7cm)) // Lesen (Small)
+      #place(top + left, dx: 0.85cm, dy: 2.15cm, c-shape(colors.at(2), 2.3cm)) // Gedichte schreiben (Am größten)
+      #place(top + left, dx: 0.25cm, dy: 0.05cm, c-shape(colors.at(0), 2.1cm)) // Kochen & Backen (Medium-Large)
+      #place(top + left, dx: 0.15cm, dy: 1.60cm, c-shape(colors.at(4), 1.5cm)) // Pilates (Am kleinsten & im VORDERGRUND)
+      
+      // LAYER 2: TEXTE (Exakt deckungsgleich drübergelegt)
+      #place(top + left, dx: 2.10cm, dy: 0.15cm, c-text("Singen", 1.9cm))
+      #place(top + left, dx: 2.40cm, dy: 1.65cm, c-text("Lesen", 1.7cm))
+      #place(top + left, dx: 0.85cm, dy: 2.15cm, c-text("Gedichte \n schreiben", 2.3cm))
+      #place(top + left, dx: 0.25cm, dy: 0.05cm, c-text("Kochen & \n Backen", 2.1cm))
+      #place(top + left, dx: 0.15cm, dy: 1.60cm, c-text("Pilates", 1.5cm))
+      
+    ])
+  ]
+}
 
 #let bento(txt, icon, bg, txt-col, col-span: 1) = grid.cell(colspan: col-span)[
   #box(
