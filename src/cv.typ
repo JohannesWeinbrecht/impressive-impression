@@ -85,9 +85,11 @@
   let _main-heading(it) = {
     if it.level == 2 {
       set text(..th("main-heading-text"))
+      set block(..th("main-heading-block"))
       it
     } else if it.level == 3 {
       set text(..th("main-subheading-text"))
+      set block(..th("main-subheading-block"))
       it
     }
   }

@@ -44,10 +44,18 @@
     weight: "semibold",
     fill: _primary-accent-color,
   ),
+  main-heading-block: (
+    below: 0.4cm,
+    above: 0.4cm,
+  ),
   main-subheading-text: (
-    size: 10.5pt,
+    size: 11pt,
     weight: "semibold",
     fill: _primary-text-color,
+  ),
+  main-subheading-block:(
+    below: 0.4cm,
+    above: 0.4cm,
   ),
   aside-side: "left",
   primary-accent-color: _primary-accent-color,
