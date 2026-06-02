@@ -247,14 +247,16 @@
       1fr,
     )
   }
-
-  grid(
-    columns: columns,
-    column-gutter: 0.6em,
-    row-gutter: 0.7em,
-    align: align,
-    ..contents,
-  )
+  [
+    #set text(..theme.at("aside-text"))
+    #grid(
+      columns: columns,
+      column-gutter: 0.6em,
+      row-gutter: 0.7em,
+      align: align,
+      ..contents,
+    )
+  ]
 }
 
 /// Lays out a main content block with a left column for title
