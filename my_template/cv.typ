@@ -1,8 +1,3 @@
-//! NOTE: You may need to install FontAwesome 6 and Open Sans fonts to render this CV correctly.
-//! See installation information at: https://github.com/JeppeKlitgaard/impressive-impression
-//
-// Compile with `typst watch --root ~/Documents/Bewerbungen/Lebenslauf/typst/impressive-impression ./my_template/cv.typ`
-
 #import "../src/lib.typ": (
   cv,
   // Utils
@@ -98,7 +93,7 @@
     ]
   )
   #make-main-content-block-with-timeline(
-    ([2016], [2022]),
+    ([2022], [2016]),
     "Allgemeinbildendes Gymnasium",
     supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
     [
@@ -107,10 +102,9 @@
   )
   #make-main-content-block-with-timeline(
     ([2012], [2016]),
-    "Allgemeinbildendes Gymnasium",
-    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
+    "Grundschule",
+    supplement: [#link("https://www.eds-cr.de/", "Eichendorffschule Crailsheim")],
     [
-      Schwerpunktfach: IMP (Informatik, Mathematik, Physik)
     ]
   )
 
@@ -146,6 +140,25 @@
 
 // Internships
   === Praktika
+  #make-main-content-block-with-timeline(
+    timeline-width: 1cm,
+    ( [2022-04-21], [2022-04-19]),
+    "Berufserkundung",
+    supplement: [#link("https://www.voith.com/corp-de/ueber-voith/maerkte-standorte/deutschland/crailsheim.html", "J.M. Voith SE & Co. KG Crailsheim")],
+    [
+      Erkundung in den dualen Studiengängen "Service-Ingenieurwesen" und "Maschinenbau"
+    ]
+  )
+
+  #make-main-content-block-with-timeline(
+    timeline-width: 1cm,
+    ([2022-02-25], [2022-02-21]),
+    "Berufserkundung",
+    supplement: [#link("https://www.bausch-stroebel.com/", "Bausch+Ströbel SE + Co. KG")],
+    [
+      Erkundung in den dualen Studiengängen "angewandte Informatik"
+    ]
+  )
 ]
 #let aside-content-1 = [
   #make-aside-persona(
@@ -156,34 +169,44 @@
     theme: theme,
   )
 
+  #let personal-information-theme=theme
+  #{
+    personal-information-theme.aside-text.size=9pt
+  }
+
   #make-aside-grid(
-    theme: theme,
+    theme: personal-information-theme,
     iconer-stack("calendar"),
     [28. April 2006],
     iconer-stack("map-marker-alt"),
     [Karlsruhe, Deutschland],
-    //iconer-stack("globe"),
-    //[#link("https://holisticdetective.co.uk", "holisticdetective.co.uk")],
-    iconer-stack("phone"),
-    [#link("tel:+44 800 PARADOX", [+44 800 PARADOX])],
+    iconer-stack("flag"),
+    [Deutsch],
+    iconer-stack("globe"),
+    [#link("https://johannesweinbrecht.github.io/", "johannesweinbrecht.github.io")],
+    //iconer-stack("phone"),
+    //[#link("tel:+49 800 PARADOX", [+44 800 PARADOX])],
     iconer-stack("at"),
-    [#link("mailto:dirk@holisticdetective.co.uk", "dirk@holisticdetective.co.uk")],
+    [#link("mailto:johannes.weinbrecht@gmail.com", "johannes.weinbrecht@gmail.com")],
   )
+
 
   == Social Network
   #make-aside-grid(
     theme: theme,
     iconer("linkedin"),
-    [#link("https://linkedin.com/in/JeppeKlitgaard", "dirkgently")],
+    [#link("https://www.linkedin.com/in/johannes-weinbrecht/", "Johannes Weinbrecht")],
     iconer("github"),
-    [#link("https://github.com/JeppeKlitgaard", "HolisticDirk")],
+    [#link("https://github.com/JohannesWeinbrecht", "JohannesWeinbrecht")],
+    iconer("sistrix"),
+    [#link("https://johannesweinbrecht.github.io/", "Personal Website")],
   )
 
   == Languages
   #make-aside-grid(
-    columns: 4,
+    columns: (auto, 1fr, auto, auto),
     rows: 12pt,
-    align: (horizon + center, horizon + left, horizon + right),
+    align: (horizon + center, horizon + left, horizon + right, horizon + right),
     theme: theme,
     flag("GER"),
     [German],
@@ -191,7 +214,7 @@
     dot-ratings(6, 6),
     flag("GB"),
     [English],
-    [C1],
+    [B1/C1],
     dot-ratings(5, 6),
     flag("FR"),
     [French],
@@ -199,41 +222,28 @@
     dot-ratings(3, 6),
   )
 
-  == Test
+  == Fähigkeiten
+
+  === Programmieren
+
+  #v(0.1cm)
 
   #make-aside-grid(
     theme: theme,
-    align: (horizon + left),
-    columns: 1,
+    align: (horizon + center, horizon, left),
+    columns: (auto, 1fr),
+    fa-icon("python"),
     [Python],
-    skill-bar(50%),
-  )
-
-  == Hard Skills
-  #make-aside-grid(
-    columns: 2,
-    theme: theme,
-    iconer("project-diagram"), [Interconnection Detection],
-    iconer("hourglass-half"), [Time Paradox Wrangling],
-    iconer("cat"), [Quantum Cat Rescue],
-    iconer("dice"), [Luck-as-a-Service],
-    iconer("rocket"), [Interdimensional Travel],
-  )
-
-  == Soft Skills
-  #make-aside-grid(
-    columns: 2,
-    theme: theme,
-    iconer("lightbulb"), [Intuitive Hunching],
-    iconer("sun"), [Stubborn Optimism],
-    iconer("hat-wizard"), [Charming Eccentricity],
-    iconer("comment-dots", solid: true), [Persurasive Rambling],
+    grid.cell(colspan:2 , skill-bar(80%)),
   )
 ]
 
+
 // Page 2
 #let main-content-2 = [
-  == Awards
+  == Auszeichnungen, Preise & Errungenschaften
+
+  === Abitur-Preise
   #[
     #set par(spacing: 0.0em, leading: 0.3em)
 
@@ -245,6 +255,20 @@
       title-as-heading: false,
       timeline-line-gap: 0pt,
     )
+    #make-main-content-block-with-timeline(
+      [2021],
+      [Lifetime Achievement in Holistic Detection],
+      supplement: [Self-Awarded],
+      [],
+      title-as-heading: false,
+      timeline-line-gap: 0pt,
+    )
+  ]
+
+  == Awards
+  #[
+    #set par(spacing: 0.0em, leading: 0.3em)
+
     #make-main-content-block-with-timeline(
       [2018],
       "Holistic Detective of the Year",
