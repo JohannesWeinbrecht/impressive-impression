@@ -335,6 +335,12 @@
     dash: "solid",
   ),
 ) = {
+  let rowspacing = (1em, auto, 1em)
+
+  if body == []{
+    rowspacing = (1em, auto, auto)
+  }
+
   body = make-main-content-block(
     title,
     body,
@@ -365,8 +371,9 @@
   }
 
   grid(
+    //stroke: black,
     columns: (timeline-width/2, 0pt, timeline-width/2, 1fr),
-    rows: (1em, auto, auto),
+    rows: rowspacing,
     column-gutter: 1em,
     row-gutter: (timeline-line-gap, timeline-line-gap, 0em),
     align: (center, center, center, left),
