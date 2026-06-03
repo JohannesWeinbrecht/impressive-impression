@@ -366,7 +366,7 @@
 
   grid(
     columns: (timeline-width/2, 0pt, timeline-width/2, 1fr),
-    rows: (1em, auto, 1em),
+    rows: (1em, auto, auto),
     column-gutter: 1em,
     row-gutter: (timeline-line-gap, timeline-line-gap, 0em),
     align: (center, center, center, left),
