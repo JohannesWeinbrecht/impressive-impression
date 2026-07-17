@@ -1,6 +1,42 @@
 #import "utils.typ": crop-image
 #import "theme.typ": theme-helper
+#import "@preview/nth:1.0.1": nth
 
+#let signature(
+  /// Name of the person which is signing
+  /// -> String
+  name,
+  /// Signature of the person in content form
+  /// -> content
+  signature,
+  /// Date of the signature as a datetime object
+  /// -> datetime
+  date: datetime.today(),
+  /// Vertical content spacing before the signature
+  space: v(1fr),
+  /// Theme dictionary to use for styling
+  /// -> dictionary
+  theme
+) = {
+  let th = theme-helper(theme)
+
+  space
+    grid(
+      columns: (1fr, 2fr, 1fr),
+      align: (center + horizon, center + horizon, center + horizon),
+      {
+        let day = nth(date.display("[day padding:none]"), sup: true)
+        let month = date.display("[month repr:long]")
+        let year = date.display("[year]")
+        text([#month #day, #year], fill: th("secondary-text-color"), weight: "semibold")
+      },
+      signature,
+      text(name,
+        fill: th("secondary-text-color"),
+        weight: "semibold",
+      ),
+    )
+}
 
 #let bubble-diagram(
 

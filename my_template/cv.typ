@@ -11,6 +11,7 @@
   make-aside-grid,
   make-main-content-block,
   make-main-content-block-with-timeline,
+  signature,
   // Theme
   theme-helper,
 )
@@ -458,6 +459,19 @@
   #pill("Mythical Creatures")
 ]
 
+#let aside-content-3 = []
+
+#let main-content-3 = [
+  == Engagement
+
+  === Studium
+
+  === Schule
+
+
+  #signature("Johannes Weinbrecht", [Johannes Weinbrecht],theme)
+]
+
 // Generate CV
 #cv(
   theme: theme,
@@ -465,5 +479,6 @@
   pages-content: (
     ("left": aside-content-1, "main": main-content-1),
     ("left": aside-content-2, "main": main-content-2),
+    ("left": aside-content-3, "main": main-content-3),
   ),
 )
