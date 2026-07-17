@@ -46,7 +46,7 @@
   ),
   main-heading-block: (
     below: 0.4cm,
-    above: 0.4cm,
+    above: 0.5cm,
   ),
   main-subheading-text: (
     size: 11pt,
