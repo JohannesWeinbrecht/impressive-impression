@@ -70,6 +70,17 @@
   == Bildungsweg
 
   === Studium
+  #[
+    //#set par(spacing: 0em, leading: 0.3em)
+
+    #make-main-content-block-with-timeline(
+      [2024-01],
+      [Aufnahme in die Studienstiftung des deutschen Volkes],
+      supplement: [],
+      [],
+      timeline-line-gap: 0pt,
+    )
+  ]
 
   #make-main-content-block-with-timeline(
     ([Present], [2024]),
@@ -80,6 +91,7 @@
       Am KIT bin ich am Institut für Automation und Angewandte Informatik in der Forschungsgruppe Energiesystemanalyse tätig.
     ]
   )
+
 
   === Schulische Laufbahn
 
@@ -244,160 +256,118 @@
 #let main-content-2 = [
   == Auszeichnungen, Preise & Errungenschaften
 
-  === Abitur-Preise
-  #[
-    #set par(spacing: 0.0em, leading: 0.3em)
+  === Errungenschaften
 
-    #make-main-content-block-with-timeline(
-      [2021],
-      [Lifetime Achievement in Holistic Detection],
-      supplement: [Self-Awarded],
-      [],
-      title-as-heading: false,
-      timeline-line-gap: 0pt,
-    )
-    #make-main-content-block-with-timeline(
-      [2021],
-      [Lifetime Achievement in Holistic Detection],
-      supplement: [Self-Awarded],
-      [],
-      title-as-heading: false,
-      timeline-line-gap: 0pt,
-    )
-  ]
-
-  == Awards
-  #[
-    #set par(spacing: 0.0em, leading: 0.3em)
-
-    #make-main-content-block-with-timeline(
-      [2018],
-      "Holistic Detective of the Year",
-      supplement: [British Association of Unorthodox],
-      [],
-      title-as-heading: false,
-      timeline-line-gap: 0pt,
-    )
-    #make-main-content-block-with-timeline(
-      [2020],
-      "Outstanding Coincidence Resolution",
-      supplement: [Society for Applied Serendipity],
-      [],
-      title-as-heading: false,
-      timeline-line-gap: 0pt,
-    )
-    #make-main-content-block-with-timeline(
-      [2015],
-      [#nth(2, sup: true) Place, Annual Sofa Relocation Challenge],
-      supplement: [Royal Society of Furniture Physics],
-      [],
-      title-as-heading: false,
-      timeline-line-gap: 0pt,
-    )
-  ]
-
-  #v(-0.8em)
-  == Other Certifications
   #make-main-content-block-with-timeline(
-    [2013],
-    [Certified Interdimensional Liaison],
-    supplement: [UK Council of Multiversal Affairs],
-    [A\*(a\*) grade],
+    [2025],
+    [Stipendium],
+    supplement: [Studienstiftung des deutschen Volkes], // TODO Add link
+    [Aufnahme in die Studienstiftung des deutschen Volkes als Stipendiat nach dem Schulvorschlag.],
     timeline-line-gap: 0pt,
   )
   #make-main-content-block-with-timeline(
-    [2018],
-    [Chronological Irregularity Investigator],
-    supplement: [Temporal Anomaly Bureau],
-    [Registration valid until January #nth(3), 2318.]
+    [2024],
+    [Stipendium],
+    supplement: [e-fellows.net], // TODO Add link
+    [Verleihung des e-fellows.net Online-Stipendiums für hervorragende schulische Leistungen.],
+    timeline-line-gap: 0pt,
+  )
+  #make-main-content-block-with-timeline(
+    [2024],
+    [Schülerakademie: Algorithm Engineering],
+    supplement: [JGW], // TODO Add link TODO find log form
+    [Teilnahme an der JGW-Schülerakademie Pappenburg I in 2022 im Rahmen der deutschen Schülerakademie am Kurs Algorithm Engineering.
+    Im Kurs wurde 11 Tage lang auf Studienniveau am Thema Algorithm Engineering gearbeitet.
+    Zusätzlich dazu fanden viele kursübergreifende Aktivitäten statt, an denen ich zahlreich teilnahm.],
+    timeline-line-gap: 0pt,
   )
 
-  == Association and Voluntary Work
-  #make-main-content-block-with-timeline(
-    ([2020], [2019]),
-    "Chair of the Board",
-    supplement: [Sofa Displacement Prevention Society],
-    [
-      Leads strategic initiatives to address and investigate the mysterious phenomena of sofas becoming inexplicably stuck in stairwells and hallways across the UK.
-    ]
+  === Abitur-Preise
+
+  #make-main-content-block-with-timeline( // TODO add links
+    [2024],
+    [Ferry-Porsche Preis],
+    supplement: [Porsche AG & Kultus Ministerium BW],
+    [Preis für herausragende Leistungen in den Fächern Mathematik & Physik],
+    timeline-line-gap: 0pt,
   )
   #make-main-content-block-with-timeline(
-    ([Present], [2020]),
-    "Temporal Confusion Helpline Advisor",
-    supplement: [Society for Safe Timekeeping],
-    [
-      Offers comfort and pragmatic (if peculiar) solutions to individuals experiencing minor chronological disturbances.
-      - Provides advice on time loops, déjà vu, and misplaced temporal objects.
-    ]
+    [2024],
+    [DPG-Preis],
+    supplement: [Deutsche Physische Gesellschaft],
+    [Anerkennung für sehr gute Leistungen im Fach Physik],
+    timeline-line-gap: 0pt,
   )
   #make-main-content-block-with-timeline(
-    ([2018], [2016]),
-    "Midnight Ghost Walk Guide",
-    supplement: [#link("https://www.camden.gov.uk/", "Camden Borough Historical Society")],
-    [
-      Led educational (and occasionally interactive) tours on local hauntings and spectral residents.
-    ]
+    [2024],
+    [GDCh-Preis],
+    supplement: [Gesellschaft Deutscher Chemiker],
+    [Für den Jahrgangsbesten im Fach Chemie],
+    timeline-line-gap: 0pt,
+  )
+  #make-main-content-block-with-timeline(
+    [2024],
+    [Geschichtspreis],
+    supplement: [Historischen Vereins für Württembergisch Franken],
+    [Preis für besondere Leistungen im Fach Geschichte],
+    timeline-line-gap: 0pt,
   )
 
-  == References
+  === Wettbewerbe
+
+  #make-main-content-block-with-timeline(
+    [2024 & 2023],
+    [Internationale Physik Olympiade],
+    supplement: [],
+    [Qualifikation & Teilnahme Runde 2],
+    timeline-line-gap: 0pt,
+  )
+  #make-main-content-block-with-timeline(
+    [2024],
+    [Internationale Chemie Olympiade],
+    supplement: [],
+    [Qualifikation & Teilnahme Runde 2],
+    timeline-line-gap: 0pt,
+  )
   #make-main-content-block-with-timeline(
     [2023],
-    "Honourable Lord Marmaduke Whiskerson III",
-    supplement: [Pet Extraordinaire],
-    [
-      "_Impeccable pet recovery, albeit numerous unexpected surcharges_"\
-      Letter of recommendation available upon request.
-    ],
+    [Bundeswettbewerb Mathematik],
+    supplement: [],
+    [Anerkennung],
     timeline-line-gap: 0pt,
   )
-
   #make-main-content-block-with-timeline(
-    [2020],
-    "Dr Thelma Quibble",
-    supplement: [Chair, Institute for Chronological Mishaps],
-    [
-      "_While he may be chronologically impaired, his insights into time-related phenomena are unparalleled._"\
-      Letter of recommendation available here: #linker-pdf("https://timetraveler.wiki/", "dr_quibble.pdf")
-    ],
+    [2024],
+    [Bundeswettbewerb Informatik],
+    supplement: [],
+    [Qualifikation Runde 2],
     timeline-line-gap: 0pt,
   )
-
-  == Other Documents
-  #[
-    #set text(size: 9pt)
-
-    #grid(
-      columns: 2,
-      align: (left, left),
-      column-gutter: 2em,
-      row-gutter: 6pt,
-
-      [Chronological Irregularity Inspector Certificate], linker-pdf("https://www.google.com/", "cert_chron_irreg.pdf"),
-      [Interdimensional Relations Diploma], linker-pdf("https://www.google.com/", "diploma_inter_rels.pdf"),
-    )
-
-  ]
+  #make-main-content-block-with-timeline(
+    [2023],
+    [Jugendwettbewerb Informatik],
+    supplement: [],
+    [1.Runde 2.Preis, 2.Runde 1.Preis, 3.Runde 1.Preis],
+    timeline-line-gap: 0pt,
+  )
+  #make-main-content-block-with-timeline(
+    [2023/ 2024],
+    [Geschichtswettbewerb des Bundespräsidenten],
+    supplement: [],
+    [Verfassen einer ca. 50 Seiten langen Facharbeit in einem zweier Team zur Abgabe am Wettbewerb im Rahmen einer besonderen Lernleistung.
+    Die besondere Lernleistung wurde mit 15NP bewertet.],
+    timeline-line-gap: 0pt,
+  )
+  #make-main-content-block-with-timeline(
+    [2023],
+    [Jugend debattiert],
+    supplement: [],
+    [Im Schulwettbewerb belegte ich den ersten Platz, wodurch ich mich für den Regionalwettbewerb qualifizierte.
+    Dort belegte ich den fünften Platz.],
+    timeline-line-gap: 0pt,
+  )
 
   // Footer
-  #v(1fr)
-  #grid(
-    columns: (1fr, 2fr, 1fr),
-    align: (center + horizon, center + horizon, center + horizon),
-    {
-      let today = datetime.today()
-      let day = nth(today.display("[day padding:none]"), sup: true)
-      let month = today.display("[month repr:long]")
-      let year = today.display("[year]")
-      text([#month #day, #year], fill: th("secondary-text-color"), weight: "semibold")
-    },
-    [
-      #image("assets/signature.svg", height: 3em)
-    ],
-    text(name,
-      fill: th("secondary-text-color"),
-      weight: "semibold",
-    ),
-  )
 ]
 
 #let aside-content-2 = [
@@ -407,32 +377,6 @@
     theme: theme,
   )
 
-  == Detection Techniques
-  #make-aside-grid(
-    columns: 3,
-    align: (horizon + center, horizon + left, horizon + right),
-    theme: theme,
-    iconer("taxi"), [Taxi Logic], dot-ratings(5, 5),
-    iconer("cat"), [Cat Sense], dot-ratings(4, 5),
-    iconer("hourglass-half"), [Time Reversal], dot-ratings(4, 5),
-    iconer("pizza-slice"), [Pizza Stakeout], dot-ratings(5, 5),
-    iconer("project-diagram"), [Clue Weaving], dot-ratings(3, 5),
-    iconer("ghost"), [Paranormal], dot-ratings(2, 5),
-    iconer("lightbulb"), [Hunch Jumping], dot-ratings(4, 5),
-    iconer("dice"), [Dumb Luck], dot-ratings(5, 5),
-    iconer("question"), [Wild Guessing], dot-ratings(3, 5),
-  )
-
-  == Problem Solving Skills
-  #make-aside-grid(
-    columns: 3,
-    align: (horizon + center, horizon + left, horizon + right),
-    theme: theme,
-    iconer("microchip"), [Tech Taming], dot-ratings(3, 5),
-    iconer("hammer"), [Percussive], dot-ratings(4, 5),
-    iconer("ruler"), [Non-Euclidean], dot-ratings(2, 5),
-    iconer("power-off"), [Rebooting], dot-ratings(5, 5),
-  )
 
   == Case Portfolio
   #let pill = body => make-pill(body, theme)
