@@ -271,7 +271,7 @@
     fa-icon("rust"),
     [Rust],
     grid.cell(colspan:2 , skill-bar(10%)),
-    fa-icon("cpp"),
+    [],
     [C++],
     grid.cell(colspan:2 , skill-bar(10%)),
   )
