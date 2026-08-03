@@ -405,6 +405,79 @@
 
   === Studium
 
+  #make-main-content-block-with-timeline(
+    ([2024-11], [2025-09]),
+    [Mitglied des Nachhaltigkeitsreferat],
+    supplement: [#link("www.stuv-karlsruhe.de","StuV Karlsruhe")],
+    [Maßgebliche Beteiligung an der Beschaffung eines neuen Wasserspenders für die Studierendenschaft der DHBW Karlsruhe.],
+  )
+  #make-main-content-block-with-timeline(
+    ([2025-03], [2025-09]),
+    [Mitglied des Finanzreferats],
+    supplement: [#link("www.stuv-karlsruhe.de","StuV Karlsruhe")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [2025],
+    [Stellvertretende Leitung des Finanzreferats],
+    supplement: [#link("www.stuv-karlsruhe.de","StuV Karlsruhe")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [2025],
+    [Leitung des IT-Referat],
+    supplement: [#link("www.stuv-karlsruhe.de","StuV Karlsruhe")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [2025],
+    [Mitglied des Head-Office Referat],
+    supplement: [#link("www.stuv-karlsruhe.de","StuV Karlsruhe")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [2025],
+    [Vorsitzender der Wahlversammlung],
+    supplement: [#link("https://www.karlsruhe.dhbw.de/startseite.html", "DHBW Karlsruhe")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [2025],
+    [Mitglied der QSM-Kommission],
+    supplement: [#link("https://www.karlsruhe.dhbw.de/startseite.html", "DHBW Karlsruhe")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [2025],
+    [Wahlversammlungsmandat im StuPa],
+    supplement: [#link("https://studierendenschaft.dhbw-asta.de/studierendenparlament-stupa/","Studierendenparlament")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [2025],
+    [Studentischer Vertreter in der \ Fachkommission Technik],
+    supplement: [#link("https://www.dhbw.de/die-dhbw/gremien/fachkommissionen/fachkommission-technik#zusammensetzung","Fachkommission Technik")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [2025],
+    [Studentischer Vertreter in der \ Kommission für Qualitätssicherung],
+    supplement: [#link("https://www.dhbw.de/die-dhbw/gremien/kommission-fuer-qualitaetssicherung","Kommission für Qualitätssicherung")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [2025],
+    [Studierendenwerksvertreter der \ DHBW Karlsruhe],
+    supplement: [#link("https://www.sw-ka.de/","Studierendenwerk Karlsruhe")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [2025],
+    [Beratendes Mitglied im AStA-\ Hochschulpolitik-Referat],
+    supplement: [#link("https://studierendenschaft.dhbw-asta.de/allgemeiner-studierendenausschuss-asta/","Allgemeiner Studierendenausschuss")],
+    [],
+  )
+
   === Schule
 
 
