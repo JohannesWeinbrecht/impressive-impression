@@ -265,6 +265,15 @@
     fa-icon("python"),
     [Python],
     grid.cell(colspan:2 , skill-bar(80%)),
+    fa-icon("java"),
+    [Java],
+    grid.cell(colspan:2 , skill-bar(45%)),
+    fa-icon("rust"),
+    [Rust],
+    grid.cell(colspan:2 , skill-bar(10%)),
+    fa-icon("cpp"),
+    [C++],
+    grid.cell(colspan:2 , skill-bar(10%)),
   )
 ]
 
