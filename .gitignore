@@ -1,3 +1,4 @@
 tests/**/out/
 tests/**/diff/
+my_template/cv.pdf
 
