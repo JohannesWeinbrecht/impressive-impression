@@ -377,30 +377,6 @@
     theme: theme,
   )
 
-
-  == Case Portfolio
-  #let pill = body => make-pill(body, theme)
-
-  #pill("Wandering Cat")
-  #pill("Poltergeists")
-  #pill("Tea Time Paradox")
-  #pill("Ghosts")
-  #pill("Sofa Teleportation")
-  #pill("Dodos")
-  #pill("Haunted Hog")
-  #pill("Rickshaws")
-  #pill("Vanishing Pizza")
-  #pill("Time Loops")
-  #pill("Ghost Wi-Fi")
-  #pill("Haunts")
-  #pill("Perpetual Coincidence")
-  #pill("Broken Time")
-  #pill("Raining Fish")
-  #pill("Evasive Shadow")
-  #pill("Psychic Postcard")
-  #pill("Cat Relocation")
-  #pill("Burial Sites")
-  #pill("Mythical Creatures")
 ]
 
 #let aside-content-3 = []
