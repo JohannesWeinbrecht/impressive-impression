@@ -275,6 +275,22 @@
     [C++],
     grid.cell(colspan:2 , skill-bar(10%)),
   )
+
+  === Programme
+
+  #v(0.1cm)
+
+  #make-aside-grid(
+    theme: theme,
+    align: (horizon + center, horizon, left),
+    columns: (auto, 1fr),
+    fa-icon("google"),
+    [Docs, Sheets, Slides],
+    grid.cell(colspan:2 , skill-bar(80%)),
+    fa-icon("microsoft"),
+    [Word, Excel, PowerPoint],
+    grid.cell(colspan:2 , skill-bar(20%)),
+  )
 ]
 
 
