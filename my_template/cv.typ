@@ -127,18 +127,35 @@
 // Work Experience
   === Duales Studium
   #make-main-content-block-with-timeline(
-    ([2024-12], [2024-10]),
-    "Dritte Praxisphase",
+    ([2026-09], [2026-07]),
+    "Vierte Praxisphase",
     supplement: [#link("www.kit.edu", "KIT")],
     [
+      Erweiterung des eASiMoV-Frameworks um eine Software zur generischen Darstellung von Stromnetzmodellen im Optimierungskontext ergänzend zu ePowCoRe.
+      Diese wurde damit erprobt importierte Netze in _PyPSA_ zu optimieren und rückschlüsse auf die Ausgangsnetze zu ziehen.
     ]
   )
 
   #make-main-content-block-with-timeline(
-    ([2024-12], [2024-10]),
+    ([2026-01], [2026-03]),
+    "Dritte Praxisphase",
+    supplement: [#link("www.kit.edu", "KIT")],
+    [
+      Design und implementierung eines modularen Frameworks zur automatischen Generierung von _Modelica_-Modellen aus beliebigen Datenquellen mit anschließender konvertierung zu _FMU_-Modellen.
+      Innerhalb des Frameworks wurde ein Worklfow zur Erstellung von Modellen aus Zeitreihendaten und einer Konvertierung zu _FMUs_ mittels _Dymola_ implementiert.
+      Die generierten Häusermodelle wurden in einer Co-Simulation auf dem bwUniCluster getestet und auf plausibilität überprüft.
+    ]
+  )
+
+  #make-main-content-block-with-timeline(
+    ([2024-12], [2024-10]), // TODO
     "Zweite Praxisphase",
     supplement: [#link("www.kit.edu", "KIT")],
     [
+      Erweiterung des Open-Source Projekts _ePowCoRe_ um einen _DigSilent PowerFactory_-Exporter.
+
+      Analyse von automatisch generierten Netzen über lange Zeiträume mittels _DigSilent Powerfactory_ zur Überprüfung der Plausibilität. // TODO
+      Dabei wurde ein automatisierter Workflow zum Export zahlreicher Daten aus der Simulation so wie der Auswertung dieser erstellt.
     ]
   )
 
@@ -147,7 +164,7 @@
     "Erste Praxisphase",
     supplement: [#link("www.kit.edu", "KIT")],
     [
-      Einarbeitung in die betrieblichen Abläufe. Erweiterung des Open-Source Projekts ePowCoRe.
+      Einarbeitung in die betrieblichen Abläufe und die Modellierung und Simulation von Stromnetzen mit _pandapower_. Erweiterung des Open-Source Projekts _ePowCoRe_ um einen _pandapower_-Exporter.
     ]
   )
 
@@ -383,6 +400,8 @@
 
 #let main-content-3 = [
   == Engagement
+
+  Ein Jahres angabe bedeutet das die Tätigkeit im gesamten Studienjahr von 01.10 bis zum 30.09 des Folgejahres durchgeführt wurden.
 
   === Studium
 
