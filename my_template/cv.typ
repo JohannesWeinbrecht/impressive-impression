@@ -113,13 +113,13 @@
       Schwerpunktfach: IMP (Informatik, Mathematik, Physik)
     ]
   )
-  #make-main-content-block-with-timeline(
-    ([2012], [2016]),
-    "Grundschule",
-    supplement: [#link("https://www.eds-cr.de/", "Eichendorffschule Crailsheim")],
-    [
-    ]
-  )
+  // #make-main-content-block-with-timeline(
+  //   ([2012], [2016]),
+  //   "Grundschule",
+  //   supplement: [#link("https://www.eds-cr.de/", "Eichendorffschule Crailsheim")],
+  //   [
+  //   ]
+  // )
 
 // Professional Background
   == Beruflicher Werdegang
