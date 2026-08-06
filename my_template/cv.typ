@@ -5,6 +5,7 @@
   colorize-svg-string,
   // Elements
   dot-ratings,
+  bento,
   skill-bar,
   make-pill,
   make-aside-persona,
@@ -428,7 +429,7 @@
 
   Ein Jahres angabe bedeutet das die Tätigkeit im gesamten Studienjahr von 01.10 bis zum 30.09 des Folgejahres durchgeführt wurden.
 
-  === Studium
+  === Verfasste Studierendenschaft
 
   #make-main-content-block-with-timeline(
     ([2024-11], [2025-09]),
@@ -503,7 +504,53 @@
     [],
   )
 
+  === Wohnheim
+
+  #make-main-content-block-with-timeline(
+    [],
+    [Werkstatt Tutor],
+    supplement: [#link("https://www.sw-ka.de/","Studierendenwerk Karlsruhe")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [],
+    [Haussprecher],
+    supplement: [#link("https://www.sw-ka.de/","Studierendenwerk Karlsruhe")],
+    [],
+  )
+
   === Schule
+
+  #make-main-content-block-with-timeline(
+    [],
+    [Demokratieausschuss],
+    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [],
+    [Nachhaltigkeitsausschuss],
+    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [],
+    [Englisch Tutor],
+    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
+    [],
+  )
+  #make-main-content-block-with-timeline(
+    [],
+    [Betreuer in der Ganztagesschule],
+    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
+    [],
+  )
+  #make-main-content-block-with-timeline( // TODO link and maybe different section
+    [2024],
+    [Juror bei bei Jugend debattiert Schul- und Regionalwettbewerb],
+    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
+    [],
+  )
 
 
   #signature("Johannes Weinbrecht", [Johannes Weinbrecht],theme)
