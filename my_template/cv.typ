@@ -405,8 +405,9 @@
     [2023],
     [Jugend debattiert],
     supplement: [],
-    [Im Schulwettbewerb belegte ich den ersten Platz, wodurch ich mich für den Regionalwettbewerb qualifizierte.
-    Dort belegte ich den fünften Platz.],
+    [
+      Schulwettbewerb 1. Platz; Regionalwettbewerb 5. Platz
+    ],
     timeline-line-gap: 0pt,
   )
 
