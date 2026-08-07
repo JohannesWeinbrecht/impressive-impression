@@ -89,7 +89,7 @@
     supplement: [#link("www.karlsruhe.dhbw.de", "DHBW Karlsruhe") & #link("www.kit.edu", "KIT")],
     [
       Duales Studium Informatik an der dualen Hochschule Baden-Württemberg Karlsruhe in Kooperation mit dem Karlsruher Institut für Technologie.
-      Am KIT bin ich am Institut für Automation und Angewandte Informatik in der Forschungsgruppe Energiesystemanalyse tätig.
+      Die Ausbildungsabteilung ist die Gruppe _Energiesystemanalyse (ESA)_ des _Institut für Automation und Angewandte Informatik (IAI)_.
     ]
   )
 
