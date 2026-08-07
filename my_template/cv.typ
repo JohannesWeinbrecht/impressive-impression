@@ -321,7 +321,7 @@
     supplement: [JGW], // TODO Add link TODO find log form
     [Teilnahme an der JGW-Schülerakademie Pappenburg I in 2022 im Rahmen der deutschen Schülerakademie am Kurs Algorithm Engineering.
     Im Kurs wurde 11 Tage lang auf Studienniveau am Thema Algorithm Engineering gearbeitet.
-    Zusätzlich dazu fanden viele kursübergreifende Aktivitäten statt, an denen ich zahlreich teilnahm.],
+    Zusätzlich dazu fanden viele kursübergreifende Aktivitäten statt, an denen zahlreich teilgenommen wurde.],
     timeline-line-gap: 0pt,
   )
 
