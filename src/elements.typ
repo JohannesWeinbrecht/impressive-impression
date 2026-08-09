@@ -2,6 +2,67 @@
 #import "theme.typ": theme-helper
 #import "@preview/nth:1.0.1": nth
 
+#let custom-template-heading(
+  full-width,
+  it,
+  th,
+) = {
+  if it.level == 2 {
+    set text(..th("main-heading-text"))
+    set block(..th("main-heading-block"))
+    if th("main-heading-line-enable") {
+      box(it) + box(context {
+
+        let size = measure(it)
+
+        let a = here().position()
+
+        let start = a.x + size.width
+
+        let left-over-space = (full-width) - th("margin") - size.width
+        let gap = th("main-heading-line-gap")
+        let opposite-gap = th("main-heading-line-opposite-gap")
+
+        let stroke-line = (
+          paint: th("main-heading-text").fill,
+          thickness: th("main-heading-line-thickness"),
+          cap: th("main-heading-line-cap"),
+        )
+        let stroke-line-end = (
+          paint: th("main-heading-text").fill,
+          thickness: th("main-heading-line-thickness"),
+          cap: th("main-heading-line-opposite-cap"),
+        )
+        let _line = line(start: (gap, 0%), length: left-over-space - gap - opposite-gap, stroke: stroke-line)
+        let _boxed-line = box(_line, height: size.height)
+        let _line2 = line(start: (gap, 0%), length: 0pt, stroke: stroke-line-end)
+        let _boxed-line2 = box(_line2, height: size.height)
+
+        // let _line = align(box(line(length: left-over-space), height: size.height), horizon)
+        align(_boxed-line + _boxed-line2, horizon)
+        // [#_line]
+      }, width: 0pt)
+    }
+  } else if it.level == 3 {
+    set text(..th("main-subheading-text"))
+    set block(..th("main-subheading-block"))
+    it
+  } else if it.level == 4 {
+    set text(..th("main-subsubheading-text"))
+    set block(..th("main-subsubheading-block"))
+    it
+  }
+}
+#let titled-rect(title,c, body ) = block(
+  stroke: (thickness: 1pt, paint: c),
+  inset: (top: 10pt, bottom: 5pt, right: 5pt, left: 5pt),
+  place(top + left, dy: -15pt, dx: +0pt)[
+    #box(fill: white, inset: (x: 4pt), text(weight: "medium", title))
+  ] + body
+)
+
+
+
 #let signature(
   /// Name of the person which is signing
   /// -> String
