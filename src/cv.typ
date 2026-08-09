@@ -86,10 +86,46 @@
     if it.level == 2 {
       set text(..th("main-heading-text"))
       set block(..th("main-heading-block"))
-      it
+      if th("main-heading-line-enable") {
+        box(it) + box(context {
+
+          let size = measure(it)
+
+          let a = here().position()
+
+          let start = a.x + size.width
+
+          let left-over-space = (page.width - th("aside-width")) - th("margin") - size.width
+          let gap = th("main-heading-line-gap")
+          let opposite-gap = th("main-heading-line-opposite-gap")
+
+          let stroke-line = (
+            paint: th("main-heading-text").fill,
+            thickness: th("main-heading-line-thickness"),
+            cap: th("main-heading-line-cap"),
+          )
+          let stroke-line-end = (
+            paint: th("main-heading-text").fill,
+            thickness: th("main-heading-line-thickness"),
+            cap: th("main-heading-line-opposite-cap"),
+          )
+          let _line = line(start: (gap, 0%), length: left-over-space - gap - opposite-gap, stroke: stroke-line)
+          let _boxed-line = box(_line, height: size.height)
+          let _line2 = line(start: (gap, 0%), length: 0pt, stroke: stroke-line-end)
+          let _boxed-line2 = box(_line2, height: size.height)
+
+          // let _line = align(box(line(length: left-over-space), height: size.height), horizon)
+          align(_boxed-line + _boxed-line2, horizon)
+          // [#_line]
+        }, width: 0pt)
+      }
     } else if it.level == 3 {
       set text(..th("main-subheading-text"))
       set block(..th("main-subheading-block"))
+      it
+    } else if it.level == 4 {
+      set text(..th("main-subsubheading-text"))
+      set block(..th("main-subsubheading-block"))
       it
     }
   }
