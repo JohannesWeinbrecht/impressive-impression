@@ -639,15 +639,22 @@
         inset: 0.2cm,
         rowspan: 1,
         [
-          AStA = Allgemeiner Studierenden Auschuss \
-          StuV = Studierenden Vertretung (Karlsruhe) \
-          HoPo = Hochschul Politik \
-          StuPa = Studierendenparlament \
-          QSM = Qualitätssicherungsmittel \
-          FKT = Fachkommission Technik \
-          QSK = Kommission für Qualitätssicherung \
-          SwKa = Studierendenwerk Karlsruhe \
-          DHBW-KA = Duale Hochschule Baden-Württemberg Karlsruhe\
+          #set par(leading: 4pt)
+          #grid(
+            columns: 3,
+            column-gutter: 5pt,
+            row-gutter: 4pt,
+            align: (right, center, left),
+            [AStA    ], [=], [Allgemeiner Studierenden Auschuss],
+            [StuV    ], [=], [Studierenden Vertretung (Karlsruhe)],
+            [HoPo    ], [=], [Hochschul Politik],
+            [StuPa   ], [=], [Studierendenparlament],
+            [QSM     ], [=], [Qualitätssicherungsmittel],
+            [FKT     ], [=], [Fachkommission Technik],
+            [QSK     ], [=], [Kommission für Qualitätssicherung],
+            [SwKa    ], [=], [Studierendenwerk Karlsruhe],
+            [DHBW-KA ], [=], [Duale Hochschule Baden-Württemberg Karlsruhe],
+          )
         ]
       ),
       titled-rect(
