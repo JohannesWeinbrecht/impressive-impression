@@ -724,20 +724,22 @@
     ],
   )
 
-
+  #let semester-timeline-width = 40pt
   #make-main-content-block-with-timeline(
-    [],
+    [3 Semester],
     [Werkstatt Tutor],
     supplement: [],
     [],
     timeline-line-gap: 0pt,
+    timeline-width: semester-timeline-width,
   )
   #make-main-content-block-with-timeline(
-    [],
+    [2 Semester],
     [Haussprecher],
     supplement: [],
     [],
     timeline-line-gap: 0pt,
+    timeline-width: semester-timeline-width
   )
   ],[
 
