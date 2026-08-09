@@ -4,6 +4,8 @@
   crop-image,
   colorize-svg-string,
   // Elements
+  titled-rect,
+  custom-template-heading,
   dot-ratings,
   bento,
   skill-bar,
@@ -63,7 +65,7 @@
   return colored-svg
 }
 
-#let make-main-content-block = make-main-content-block.with(theme: theme)
+#let make-main-content-block = make-main-content-block.with(theme: theme, title-as-heading: false)
 #let make-main-content-block-with-timeline = make-main-content-block-with-timeline.with(theme: theme)
 
 // Page 1
@@ -424,132 +426,363 @@
 #let aside-content-3 = []
 
 #let main-content-3 = [
-  == Engagement
+  #context{
+    custom-template-heading(
+      page.width,
+      [#heading(level: 2, [Auszeichnungen, Preise & Errungenschaften])],
+      th
+    )
+  }
 
-  Ein Jahres angabe bedeutet das die Tätigkeit im gesamten Studienjahr von 01.10 bis zum 30.09 des Folgejahres durchgeführt wurden.
+  #grid(
+    columns: (45%, auto),
+    rows: 2,
+    column-gutter: 8pt,
+    row-gutter: 10pt,
+  [
+  === Errungenschaften
 
-  === Verfasste Studierendenschaft
+  #make-main-content-block-with-timeline(
+    [2025],
+    [Stipendium],
+    supplement: [Studienstiftung des deutschen Volkes], // TODO Add link
+    [],
+    //[Aufnahme in die Studienstiftung des deutschen Volkes als Stipendiat nach dem Schulvorschlag.],
+    timeline-line-gap: 0pt,
+  )
+  #make-main-content-block-with-timeline(
+    [2024],
+    [Stipendium],
+    supplement: [e-fellows.net], // TODO Add link
+    [],
+    //[Verleihung des e-fellows.net Online-Stipendiums für hervorragende schulische Leistungen.],
+    timeline-line-gap: 0pt,
+  )
+  #make-main-content-block-with-timeline(
+    [2022],
+    [Schülerakademie: Algorithm Engineering (Pappenburg I)],
+    supplement: [JGW], // TODO Add link TODO find log form
+    [],
+    //[JGW-Schülerakademie Pappenburg I in 2022, Kurs: Algorithm Engineering],
+    timeline-line-gap: 9pt,
+  )
+  ],
+  grid.cell(rowspan: 2,
+[
+  === Wettbewerbe
 
   #make-main-content-block-with-timeline(
-    ([2024-11], [2025-09]),
-    [Mitglied des Nachhaltigkeitsreferat],
-    supplement: [#link("www.stuv-karlsruhe.de","StuV Karlsruhe")],
-    [Maßgebliche Beteiligung an der Beschaffung eines neuen Wasserspenders für die Studierendenschaft der DHBW Karlsruhe.],
+    [2024],
+    [Internationale Chemie & Physik Olympiade und Bundeswettbewerb Informatik],
+    supplement: [],
+    [Qualifikation Runde 2],
+    timeline-line-gap: 0pt,
+    timeline-width: 0.3cm,
+  )
+  //#make-main-content-block-with-timeline(
+  //  [2024],
+  //  [Internationale Chemie Olympiade],
+  //  supplement: [],
+  //  [Qualifikation & Teilnahme Runde 2],
+  //  timeline-line-gap: 0pt,
+  //)
+  #make-main-content-block-with-timeline(
+    [2024],
+    [Bundeswettbewerb Informatik],
+    supplement: [],
+    [Qualifikation Runde 2],
+    timeline-line-gap: 0pt,
+    timeline-width: 0.3cm,
   )
   #make-main-content-block-with-timeline(
-    ([2025-03], [2025-09]),
-    [Mitglied des Finanzreferats],
-    supplement: [#link("www.stuv-karlsruhe.de","StuV Karlsruhe")],
-    [],
+    [2023],
+    [Jugendwettbewerb Informatik ],
+    supplement: [],
+    //[1.Runde 2.Preis, 2.Runde 1.Preis, 3.Runde 1.Preis],
+    [1. Preis],
+    timeline-line-gap: 0pt,
+    timeline-width: 0.3cm,
   )
   #make-main-content-block-with-timeline(
-    [2025],
-    [Stellvertretende Leitung des Finanzreferats],
-    supplement: [#link("www.stuv-karlsruhe.de","StuV Karlsruhe")],
-    [],
+    [2023/ 2024],
+    [Geschichtswettbewerb des Bundespräsidenten],
+    supplement: [],
+    [Benotet als besondere Lernleistung mit 15NP.],
+    timeline-line-gap: 0pt,
+    timeline-width: 0.3cm,
   )
   #make-main-content-block-with-timeline(
-    [2025],
-    [Leitung des IT-Referat],
-    supplement: [#link("www.stuv-karlsruhe.de","StuV Karlsruhe")],
+    [2023],
+    [Jugend debattiert],
+    supplement: [],
+    [
+      Schulwettbewerb 1. Platz; Regionalwettbewerb 5. Platz
+    ],
+    timeline-line-gap: 0pt,
+    timeline-width: 0.3cm,
+  )
+]
+  ),
+[
+  === Abitur Preise
+  #grid(rows: 4, 
+  row-gutter: 15pt,
+  make-main-content-block( // TODO add links
+    [Ferry-Porsche Preis],
+    supplement: [Porsche AG & Kultus Ministerium BW],
+    [],
+  ),
+  make-main-content-block(
+    [DPG-Preis],
+    supplement: [Deutsche Physische Gesellschaft],
+    [],
+  ),
+  make-main-content-block(
+    [GDCh-Preis],
+    supplement: [Gesellschaft Deutscher Chemiker],
+    [],
+  ),
+  make-main-content-block(
+    [Geschichtspreis],
+    supplement: [Historischen Vereins für Württembergisch Franken],
     [],
   )
-  #make-main-content-block-with-timeline(
-    [2025],
-    [Mitglied des Head-Office Referat],
-    supplement: [#link("www.stuv-karlsruhe.de","StuV Karlsruhe")],
-    [],
-  )
-  #make-main-content-block-with-timeline(
-    [2025],
-    [Vorsitzender der Wahlversammlung],
-    supplement: [#link("https://www.karlsruhe.dhbw.de/startseite.html", "DHBW Karlsruhe")],
-    [],
-  )
-  #make-main-content-block-with-timeline(
-    [2025],
-    [Mitglied der QSM-Kommission],
-    supplement: [#link("https://www.karlsruhe.dhbw.de/startseite.html", "DHBW Karlsruhe")],
-    [],
-  )
-  #make-main-content-block-with-timeline(
-    [2025],
-    [Wahlversammlungsmandat im StuPa],
-    supplement: [#link("https://studierendenschaft.dhbw-asta.de/studierendenparlament-stupa/","Studierendenparlament")],
-    [],
-  )
-  #make-main-content-block-with-timeline(
-    [2025],
-    [Studentischer Vertreter in der \ Fachkommission Technik],
-    supplement: [#link("https://www.dhbw.de/die-dhbw/gremien/fachkommissionen/fachkommission-technik#zusammensetzung","Fachkommission Technik")],
-    [],
-  )
-  #make-main-content-block-with-timeline(
-    [2025],
-    [Studentischer Vertreter in der \ Kommission für Qualitätssicherung],
-    supplement: [#link("https://www.dhbw.de/die-dhbw/gremien/kommission-fuer-qualitaetssicherung","Kommission für Qualitätssicherung")],
-    [],
-  )
-  #make-main-content-block-with-timeline(
-    [2025],
-    [Studierendenwerksvertreter der \ DHBW Karlsruhe],
-    supplement: [#link("https://www.sw-ka.de/","Studierendenwerk Karlsruhe")],
-    [],
-  )
-  #make-main-content-block-with-timeline(
-    [2025],
-    [Beratendes Mitglied im AStA-\ Hochschulpolitik-Referat],
-    supplement: [#link("https://studierendenschaft.dhbw-asta.de/allgemeiner-studierendenausschuss-asta/","Allgemeiner Studierendenausschuss")],
-    [],
+)
+  ],
+)
+
+#let eng-row-gutter = 10pt
+  #context{
+    custom-template-heading(
+      page.width,
+      [#heading(level: 2, [Engagement])],
+      th
+    )
+  }
+
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 10pt,
+    grid(
+      row-gutter: eng-row-gutter,
+      [
+        Ein Jahres angabe bedeutet das die Tätigkeit im gesamten Studienjahr von 01.10 bis zum 30.09 des Folgejahres durchgeführt wurden.
+      ],
+      [
+        === Studentisches Engagemet an der Hochschule
+        #titled-rect(
+          "Studierenden Vertretung Karlsruhe",
+          black,
+          [
+        #make-main-content-block-with-timeline(
+          ([2024-11], [2025-09]),
+          [Mitglied des Nachhaltigkeitsreferat],
+          supplement: [#link("www.stuv-karlsruhe.de","StuV")],
+          []
+          //[Maßgebliche Beteiligung an der Beschaffung eines neuen Wasserspenders für die Studierendenschaft der DHBW-KA.],
+        )
+        #make-main-content-block-with-timeline(
+          ([2025-03], [2025-09]),
+          [Mitglied des Finanzreferats],
+          supplement: [#link("www.stuv-karlsruhe.de","StuV")],
+          [],
+          timeline-line-gap: 2pt,
+        )
+        #make-main-content-block-with-timeline(
+          [2025],
+          [Stellvertretende Leitung des Finanzreferats],
+          supplement: [#link("www.stuv-karlsruhe.de","StuV")],
+          [],
+        )
+        #make-main-content-block-with-timeline(
+          [2025],
+          [Leitung des IT-Referat],
+          supplement: [#link("www.stuv-karlsruhe.de","StuV")],
+          [],
+          timeline-line-gap: 0pt,
+        )
+        #make-main-content-block-with-timeline(
+          [2025],
+          [Mitglied des Head-Office Referat],
+          supplement: [#link("www.stuv-karlsruhe.de","StuV")],
+          [],
+          timeline-line-gap: 0pt,
+        )
+          ]
+        )
+      ],
+      [
+        #titled-rect(
+          "Sonstige Ämter",
+          black,
+          [
+            #make-main-content-block-with-timeline(
+              [2025],
+              [Studierendenwerksvertreter der \ DHBW-KA],
+              supplement: [#link("https://www.sw-ka.de/","SwKa")],
+              [],
+            )
+            #make-main-content-block-with-timeline(
+              [2025],
+              [Beratendes Mitglied im AStA-\ Hochschulpolitik-Referat],
+              supplement: [#link("https://studierendenschaft.dhbw-asta.de/allgemeiner-studierendenausschuss-asta/","AStA")],
+              [],
+            )
+            #v(5pt)
+          ])
+      ]
+    ),
+    grid(
+      row-gutter: eng-row-gutter,
+      grid.cell(
+        fill: th("aside-background-color"), 
+        inset: 0.2cm,
+        rowspan: 1,
+        [
+          AStA = Allgemeiner Studierenden Auschuss \
+          StuV = Studierenden Vertretung (Karlsruhe) \
+          HoPo = Hochschul Politik \
+          StuPa = Studierendenparlament \
+          QSM = Qualitätssicherungsmittel \
+          FKT = Fachkommission Technik \
+          QSK = Kommission für Qualitätssicherung \
+          SwKa = Studierendenwerk Karlsruhe \
+          DHBW-KA = Duale Hochschule Baden-Württemberg Karlsruhe\
+        ]
+      ),
+      titled-rect(
+        "Studentische Gremien",
+        black,
+        [
+          #make-main-content-block-with-timeline(
+            [2025],
+            [Vorsitz der Wahlversammlung],
+            supplement: [#link("https://www.karlsruhe.dhbw.de/startseite.html", "DHBW-KA")],
+            [],
+            timeline-line-gap: 0pt,
+          )
+          #make-main-content-block-with-timeline(
+            [2025],
+            [Mitglied der QSM-Kommission],
+            supplement: [#link("https://www.karlsruhe.dhbw.de/startseite.html", "DHBW-KA")],
+            [],
+            timeline-line-gap: 0pt,
+          )
+          #make-main-content-block-with-timeline(
+            [2025],
+            [Wahlversammlungsmandat im StuPa],
+            supplement: [#link("https://studierendenschaft.dhbw-asta.de/studierendenparlament-stupa/","StuPa")],
+            [],
+            timeline-line-gap: 0pt,
+          )
+      ]),
+      titled-rect(
+        "Hochschul-Gremien",
+        black,
+          [
+          #make-main-content-block-with-timeline(
+            [2025],
+            [Studentischer Vertreter in der \ Fachkommission Technik],
+            supplement: [#link("https://www.dhbw.de/die-dhbw/gremien/fachkommissionen/fachkommission-technik#zusammensetzung","FKT")],
+            [],
+          )
+          #make-main-content-block-with-timeline(
+            [2025],
+            [Studentischer Vertreter in der \ Kommission für Qualitätssicherung],
+            supplement: [#link("https://www.dhbw.de/die-dhbw/gremien/kommission-fuer-qualitaetssicherung","QSK")],
+            [],
+          )
+        ]
+      )
+    )
   )
 
-  === Wohnheim
+
+#grid(
+  columns: (auto, 50%),
+  column-gutter: 15pt,
+  row-gutter: 15pt,
+  [
+
+  #grid(
+    columns: (auto, 1fr),
+    align: (left, right + horizon),
+    [
+      === Wohnheim
+    ],
+    [
+      #set text(size: 9pt, weight: "medium", fill: th("faint-text-color"))
+      #link("https://www.sw-ka.de/","Studierendenwerk Karlsruhe")
+    ],
+  )
+
 
   #make-main-content-block-with-timeline(
     [],
     [Werkstatt Tutor],
-    supplement: [#link("https://www.sw-ka.de/","Studierendenwerk Karlsruhe")],
+    supplement: [],
     [],
+    timeline-line-gap: 0pt,
   )
   #make-main-content-block-with-timeline(
     [],
     [Haussprecher],
-    supplement: [#link("https://www.sw-ka.de/","Studierendenwerk Karlsruhe")],
+    supplement: [],
     [],
+    timeline-line-gap: 0pt,
+  )
+  ],[
+
+  #grid(
+    columns: (auto, 1fr),
+    align: (left, right + horizon),
+    [
+      === Schule
+    ],
+    [
+      #set text(size: 9pt, weight: "medium", fill: th("faint-text-color"))
+      #link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")
+    ],
   )
 
-  === Schule
-
   #make-main-content-block-with-timeline(
-    [],
+    [2 Jahre],
     [Demokratieausschuss],
-    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
+    supplement: [],
     [],
+    timeline-line-gap: 0pt,
   )
   #make-main-content-block-with-timeline(
-    [],
+    [1 Jahr],
     [Nachhaltigkeitsausschuss],
-    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
+    supplement: [],
     [],
+    timeline-line-gap: 0pt,
   )
   #make-main-content-block-with-timeline(
-    [],
+    [1 Jahr],
     [Englisch Tutor],
-    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
+    supplement: [],
     [],
+    timeline-line-gap: 0pt,
   )
   #make-main-content-block-with-timeline(
-    [],
+    [2 Jahre],
     [Betreuer in der Ganztagesschule],
-    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
+    supplement: [],
     [],
+    timeline-line-gap: 0pt,
   )
   #make-main-content-block-with-timeline( // TODO link and maybe different section
     [2024],
     [Juror bei bei Jugend debattiert Schul- und Regionalwettbewerb],
-    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
+    supplement: [],
     [],
+    timeline-line-gap: 0pt,
   )
+  ]
+)
+
 
 
   #signature("Johannes Weinbrecht", [Johannes Weinbrecht],theme)
@@ -561,7 +794,7 @@
   paper: "a4",
   pages-content: (
     ("left": aside-content-1, "main": main-content-1),
-    ("main": main-content-2),
+    //("main": main-content-2),
     ("main": main-content-3),
   ),
 )
