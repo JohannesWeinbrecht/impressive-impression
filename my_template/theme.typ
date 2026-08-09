@@ -48,6 +48,12 @@
     below: 0.4cm,
     above: 0.5cm,
   ),
+  main-heading-line-enable: true,
+  main-heading-line-gap: 10pt,
+  main-heading-line-opposite-gap: 10pt,
+  main-heading-line-thickness: 3pt,
+  main-heading-line-cap: "round",
+  main-heading-line-opposite-cap: "butt",
   main-subheading-text: (
     size: 11pt,
     weight: "semibold",
@@ -56,6 +62,15 @@
   main-subheading-block:(
     below: 0.4cm,
     above: 0.4cm,
+  ),
+  main-subsubheading-text: (
+    size: 10pt,
+    weight: "medium",
+    fill: _primary-text-color,
+  ),
+  main-subsubheading-block:(
+    below: 0.4cm,
+    above: 0.3cm,
   ),
   aside-side: "left",
   primary-accent-color: _primary-accent-color,
@@ -108,7 +123,7 @@
   aside-heading-line-enable: true,
   aside-heading-line-gap: 10pt,
   aside-heading-line-opposite-gap: 10pt,
-  aside-heading-line-thickness: 1pt,
+  aside-heading-line-thickness: 2pt,
   aside-heading-line-cap: "round",
   aside-heading-line-opposite-cap: "butt",
 
