@@ -435,9 +435,9 @@
   }
 
   #grid(
-    columns: (45%, auto),
+    columns: (42%, auto),
     rows: 2,
-    column-gutter: 8pt,
+    column-gutter: 10pt,
     row-gutter: 10pt,
   [
   === Errungenschaften
