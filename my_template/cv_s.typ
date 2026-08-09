@@ -677,10 +677,10 @@
           )
           #make-main-content-block-with-timeline(
             [2025],
-            [Wahlversammlungsmandat im StuPa],
+            [Wahlversammlungsmandat \ im StuPa],
             supplement: [#link("https://studierendenschaft.dhbw-asta.de/studierendenparlament-stupa/","StuPa")],
             [],
-            timeline-line-gap: 0pt,
+            timeline-line-gap: 7pt
           )
       ]),
       titled-rect(
@@ -698,6 +698,7 @@
             [Studentischer Vertreter in der \ Kommission für Qualitätssicherung],
             supplement: [#link("https://www.dhbw.de/die-dhbw/gremien/kommission-fuer-qualitaetssicherung","QSK")],
             [],
+            timeline-line-gap: 7pt
           )
         ]
       )
