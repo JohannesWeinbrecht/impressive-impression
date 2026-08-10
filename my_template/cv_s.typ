@@ -86,7 +86,7 @@
   ]
 
   #make-main-content-block-with-timeline(
-    ([Present], [2024]),
+    ([Jetzt], [2024]),
     "Duales Studium Informatik",
     supplement: [#link("www.karlsruhe.dhbw.de", "DHBW Karlsruhe") & #link("www.kit.edu", "KIT")],
     [
