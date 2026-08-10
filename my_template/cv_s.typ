@@ -96,12 +96,22 @@
   )
 
 
-  === Schulische Laufbahn
+  #grid(
+    columns: (auto, 1fr),
+    align: (left, right + horizon),
+    [
+      === Schulische Laufbahn
+    ],
+    [
+      #set text(size: 9pt, weight: "medium", fill: th("faint-text-color"))
+      #link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")
+    ],
+  )
 
   #make-main-content-block-with-timeline(
     ([2022], [2024]),
     "Abitur",
-    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
+    supplement: [],
     [
       Abiturnote #sym.nothing 1.0 (870/900 Punkten)\
       Leistungskurse: Mathe, Physik, Chemie\
@@ -111,7 +121,7 @@
   #make-main-content-block-with-timeline(
     ([2022], [2016]),
     "Allgemeinbildendes Gymnasium",
-    supplement: [#link("https://www.lmg-crailsheim.de", "Lise-Meitner-Gymnasium Crailsheim")],
+    supplement: [],
     [
       Schwerpunktfach: IMP (Informatik, Mathematik, Physik)
     ]
