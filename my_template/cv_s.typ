@@ -91,7 +91,7 @@
     supplement: [#link("www.karlsruhe.dhbw.de", "DHBW Karlsruhe") & #link("www.kit.edu", "KIT")],
     [
       Duales Studium Informatik an der dualen Hochschule Baden-Württemberg Karlsruhe in Kooperation mit dem Karlsruher Institut für Technologie.
-      Die Ausbildungsabteilung ist die Gruppe _Energiesystemanalyse (ESA)_ des _Institut für Automation und Angewandte Informatik (IAI)_.
+      Die Ausbildungsabteilung ist die Gruppe _Energiesystemanalyse (ESA)_ des _Instituts für Automation und Angewandte Informatik (IAI)_.
     ]
   )
 
