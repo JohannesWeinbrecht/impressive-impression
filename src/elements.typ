@@ -98,7 +98,41 @@
       ),
     )
 }
+#let custom-signature(
+  /// Name of the person which is signing
+  /// -> String
+  name,
+  /// Signature of the person in content form
+  /// -> content
+  signature,
+  /// Date of the signature as a datetime object
+  /// -> datetime
+  date: datetime.today(),
+  /// Datetime .display string style
+  date-style: str,
+  /// Vertical content spacing before the signature
+  space: v(1fr),
+  /// Theme dictionary to use for styling
+  /// -> dictionary
+  theme
+) = {
+  let th = theme-helper(theme)
 
+  space
+    grid(
+      columns: (1fr, 2fr, 1fr),
+      align: (center + horizon, center + horizon, center + horizon),
+      {
+        let display-date = date.display(date-style)
+        text(display-date, fill: th("secondary-text-color"), weight: "semibold")
+      },
+      signature,
+      text(name,
+        fill: th("secondary-text-color"),
+        weight: "semibold",
+      ),
+    )
+}
 #let bubble-diagram(
 
 ) = {
