@@ -5,6 +5,7 @@
   colorize-svg-string,
   // Elements
   titled-rect,
+  custom-signature,
   custom-template-heading,
   dot-ratings,
   bento,
@@ -805,7 +806,7 @@
 
 
 
-  #signature("Johannes Weinbrecht", [Johannes Weinbrecht],theme)
+  #custom-signature("Johannes Weinbrecht", [Johannes Weinbrecht],theme, date-style: "[day].[month].[year]")
 ]
 
 // Generate CV
