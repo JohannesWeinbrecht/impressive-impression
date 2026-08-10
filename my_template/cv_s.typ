@@ -576,7 +576,7 @@
     grid(
       row-gutter: eng-row-gutter,
       [
-        Ein Jahres angabe bedeutet das die Tätigkeit im gesamten Studienjahr von 01.10 bis zum 30.09 des Folgejahres durchgeführt wurden.
+        Die Jahresangabe bedeutet, dass die Tätigkeit im gesamten Studienjahr vom 01.10. bis zum 30.09. des Folgejahres ausgeführt wurde.
       ],
       [
         === Studentisches Engagemet an der Hochschule
