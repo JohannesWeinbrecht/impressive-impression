@@ -77,7 +77,7 @@
     //#set par(spacing: 0em, leading: 0.3em)
 
     #make-main-content-block-with-timeline(
-      [2024-01],
+      [2025-01],
       [Aufnahme in die Studienstiftung des deutschen Volkes],
       supplement: [],
       [],
