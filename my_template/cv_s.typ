@@ -509,7 +509,7 @@
     [Jugendwettbewerb Informatik ],
     supplement: [],
     //[1.Runde 2.Preis, 2.Runde 1.Preis, 3.Runde 1.Preis],
-    [1. Preis],
+    [Finale Runde: 1. Preis],
     timeline-line-gap: 0pt,
     timeline-width: 0.3cm,
   )
