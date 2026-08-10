@@ -233,22 +233,22 @@
     [#link("https://github.com/JohannesWeinbrecht", "JohannesWeinbrecht")],
   )
 
-  == Languages
+  == Sprachen
   #make-aside-grid(
     columns: (auto, 1fr, auto, auto),
     rows: 12pt,
     align: (horizon + center, horizon + left, horizon + right, horizon + right),
     theme: theme,
     flag("GER"),
-    [German],
+    [Deutsch],
     [C2],
     dot-ratings(6, 6),
     flag("GB"),
-    [English],
+    [Englisch],
     [B1/C1],
     dot-ratings(5, 6),
     flag("FR"),
-    [French],
+    [Französisch],
     [B1],
     dot-ratings(3, 6),
   )
