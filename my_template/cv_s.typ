@@ -145,7 +145,7 @@
     supplement: [#link("www.kit.edu", "KIT")],
     [
       Erweiterung des eASiMoV-Frameworks um eine Software zur generischen Darstellung von Stromnetzmodellen im Optimierungskontext ergänzend zu ePowCoRe.
-      Diese wurde damit erprobt importierte Netze in _PyPSA_ zu optimieren und rückschlüsse auf die Ausgangsnetze zu ziehen.
+      Diese wurde damit erprobt importierte Netze in _PyPSA_ zu optimieren und Rückschlüsse auf die Ausgangsnetze zu ziehen.
     ]
   )
 
@@ -154,9 +154,9 @@
     "Dritte Praxisphase",
     supplement: [#link("www.kit.edu", "KIT")],
     [
-      Design und implementierung eines modularen Frameworks zur automatischen Generierung von _Modelica_-Modellen aus beliebigen Datenquellen mit anschließender konvertierung zu _FMU_-Modellen.
+      Design und implementierung eines modularen Frameworks zur automatischen Generierung von _Modelica_-Modellen aus beliebigen Datenquellen mit anschließender Konvertierung zu _FMU_-Modellen.
       Innerhalb des Frameworks wurde ein Worklfow zur Erstellung von Modellen aus Zeitreihendaten und einer Konvertierung zu _FMUs_ mittels _Dymola_ implementiert.
-      Die generierten Häusermodelle wurden in einer Co-Simulation auf dem bwUniCluster getestet und auf plausibilität überprüft.
+      Die generierten Häusermodelle wurden in einer Co-Simulation auf dem bwUniCluster getestet und auf Plausibilität überprüft.
     ]
   )
 
@@ -168,7 +168,7 @@
       Erweiterung des Open-Source Projekts _ePowCoRe_ um einen _DigSilent PowerFactory_-Exporter.
 
       Analyse von automatisch generierten Netzen über lange Zeiträume mittels _DigSilent Powerfactory_ zur Überprüfung der Plausibilität. // TODO
-      Dabei wurde ein automatisierter Workflow zum Export zahlreicher Daten aus der Simulation so wie der Auswertung dieser erstellt.
+      Dabei wurde ein automatisierter Workflow zum Export zahlreicher Daten aus der Simulation sowie zur Auswertung dieser erstellt.
     ]
   )
 
