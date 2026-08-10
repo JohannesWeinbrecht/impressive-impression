@@ -224,7 +224,7 @@
   )
 
 
-  == Social Network
+  == Soziale Netzwerke
   #make-aside-grid(
     theme: theme,
     iconer("linkedin"),
