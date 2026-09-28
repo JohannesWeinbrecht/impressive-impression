@@ -288,6 +288,30 @@
   )
   box(outer)
 }
+/// Creates a little pill-shaped button with a label.
+/// -> content
+#let make-pill-custom(
+  /// Label for the pill
+  /// -> content
+  body,
+  stroke-color: black.lighten(30%),
+  fill-color: gray.lighten(50%),
+) = {
+
+  let inner = box(
+    body,
+    fill: fill-color,
+    outset: 3.5pt,
+    radius: 4pt,
+    stroke: 0.75pt + stroke-color,
+  )
+  let outer = pad(
+    inner,
+    x: 5pt,
+    y: 3pt,
+  )
+  box(outer)
+}
 
 /// Create a persona section with following features:
 /// - Avatar image with rounded corners and stroke (optional)

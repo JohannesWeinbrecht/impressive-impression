@@ -1,3 +1,13 @@
+#let auto-contrast(bg: color) = {
+  // luma().amount() liefert einen Prozentwert von 0% (Schwarz) bis 100% (Weiß)
+  if bg.luma().amount() > 50% {
+    black
+  } else {
+    white
+  }
+}
+
+
 /// Makes content square by clipping it
 #let crop-square = (c) => context {
   let dims = measure(c)

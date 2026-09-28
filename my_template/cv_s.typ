@@ -10,7 +10,7 @@
   dot-ratings,
   bento,
   skill-bar,
-  make-pill,
+  make-pill-custom,
   make-aside-persona,
   make-aside-grid,
   make-main-content-block,
@@ -18,6 +18,11 @@
   signature,
   // Theme
   theme-helper,
+  auto-contrast,
+)
+#import "./theme.typ": (
+  _primary-accent-color,
+  _primary-text-color
 )
 
 #import "utils.typ": flag, fa-icon-factory, fa-icon-factory-stack
@@ -43,6 +48,7 @@
   color-active: th("primary-accent-color"),
   color-inactive: th("faint-text-color").transparentize(65%),
 )
+//#let make-pill = make-pill.with(th)
 #let skill-bar = skill-bar.with(
   height: 8pt,
   radius: 4pt,
@@ -266,43 +272,23 @@
 
   == Fähigkeiten
 
-  === Programmieren
+  #block([
+    #grid(
+      columns: 2,
+      align: (left, right),
+      rows: 2,
+      row-gutter: 4pt,
+      [Sehr gut],
+      [Sehr schlecht],
+      //grid.cell(colspan: 2,rect(fill: gradient.linear(_primary-accent-color, rgb("#00ffff")), width: 100%, height: 10pt))
+      grid.cell(colspan: 2,rect(fill: gradient.linear(_primary-accent-color, rgb("#00ffff")), width: 100%, height: 10pt))
+    )
+  ])
 
-  #v(0.1cm)
-
-  #make-aside-grid(
-    theme: theme,
-    align: (horizon + center, horizon, left),
-    columns: (auto, 1fr),
-    fa-icon("python"),
-    [Python],
-    grid.cell(colspan:2 , skill-bar(80%)),
-    fa-icon("java"),
-    [Java],
-    grid.cell(colspan:2 , skill-bar(45%)),
-    fa-icon("rust"),
-    [Rust],
-    grid.cell(colspan:2 , skill-bar(10%)),
-    [],
-    [C++],
-    grid.cell(colspan:2 , skill-bar(10%)),
-  )
-
-  === Programme
-
-  #v(0.1cm)
-
-  #make-aside-grid(
-    theme: theme,
-    align: (horizon + center, horizon, left),
-    columns: (auto, 1fr),
-    fa-icon("google"),
-    [Docs, Sheets, Slides],
-    grid.cell(colspan:2 , skill-bar(80%)),
-    fa-icon("microsoft"),
-    [Word, Excel, PowerPoint],
-    grid.cell(colspan:2 , skill-bar(20%)),
-  )
+  #make-pill-custom([Python], fill-color: _primary-accent-color, stroke-color: auto-contrast(bg: _primary-accent-color))
+  #make-pill-custom([Python], fill-color: _primary-accent-color)
+  #make-pill-custom([Python], fill-color: _primary-accent-color)
+  #make-pill-custom([Python], fill-color: _primary-accent-color)
 ]
 
 
